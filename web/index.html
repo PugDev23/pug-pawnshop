@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>pug-pawnshop</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="style.css?v=7" rel="stylesheet">
+</link></head>
+<body class="hidden">
+<div id="app">
+<div class="panel">
+<div class="panel-accent"></div>
+<div class="topbar">
+<div class="titlewrap"><div class="titleicon"><i class="fas fa-hand-holding-dollar"></i></div><div class="titleblock">
+<div class="eyebrow">UNDERGROUND EXCHANGE</div>
+<div class="title" id="shopTitle">Pawnshop</div>
+<div class="subtitle" id="subTitle"></div>
+</div></div>
+<div class="rightblock">
+<div class="pill" id="repPill">REP 0</div>
+<div class="pill warn" id="heatPill">HEAT 0</div>
+<button class="btn ghost" id="closeBtn">X</button>
+</div>
+</div>
+<div class="tabs">
+<button class="tab active" data-tab="sell"><span class="tab-ico"><i class="fas fa-tag"></i></span><span>Sell</span></button>
+<button class="tab" data-tab="buyback"><span class="tab-ico"><i class="fas fa-rotate-left"></i></span><span>Buyback</span></button>
+<button class="tab" data-tab="contract"><span class="tab-ico"><i class="fas fa-file-contract"></i></span><span>Contract</span></button>
+<button class="tab" data-tab="market"><span class="tab-ico"><i class="fas fa-store"></i></span><span>Market</span></button>
+</div>
+<div class="content">
+<div class="tabview active" id="tab-sell"></div>
+<div class="tabview" id="tab-buyback"></div>
+<div class="tabview" id="tab-contract"></div>
+<div class="tabview" id="tab-market"></div>
+</div>
+<div class="toast hidden" id="toast"></div>
+<div class="busy hidden" id="busy">
+<div class="spinner"></div>
+<div class="busytext">Processing…</div>
+</div>
+</div>
+<div class="modal hidden" id="rumorModal">
+<div class="modalcard">
+<div class="modalhead">
+<div class="modaltitle" id="rumorTitle">Market Rumor</div>
+<button class="btn ghost" id="rumorClose">Close</button>
+</div>
+<div class="modalbody" id="rumorBody"></div>
+</div>
+</div>
+</div>
+<script src="app.js?v=7"></script>
+</body>
+</html>
